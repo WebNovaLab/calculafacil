@@ -1,0 +1,8 @@
+CALCULAFÁCIL V4 COMPLETA
+1. Descomprime este ZIP.
+2. En el repositorio calculafacil: Add file > Upload files.
+3. Selecciona TODOS los archivos de esta carpeta.
+4. Commit changes.
+No borres las páginas antiguas antes: los archivos con el mismo nombre se sustituyen.
+Después comprueba index.html y una calculadora nueva.
+IMPORTANTE: ads.txt y el código de anuncios NO se inventan. Se añaden cuando Google AdSense facilite tu Publisher ID/código.
