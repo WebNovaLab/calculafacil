@@ -1,341 +1,349 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CalculaFácil | Calculadoras y herramientas online gratis</title>
+<title>CalculaFácil | Calculadoras online gratis</title>
 
-  <meta name="description"
-        content="Calculadoras online gratuitas para tu día a día. Calcula gasolina, IVA, descuentos, porcentajes, gastos compartidos y mucho más.">
+<meta name="description" content="Calculadoras online gratuitas de gasolina, IVA, descuentos, porcentajes, gastos, fechas, horas trabajadas, sueldo por hora y nota media.">
 
-  <meta name="robots" content="index, follow">
+<meta name="robots" content="index,follow">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8fb;
-      color: #172033;
-      line-height: 1.6;
-    }
+html{scroll-behavior:smooth}
 
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e7eaf0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f6f8fb;
+color:#172033;
+line-height:1.6;
+}
 
-    .nav {
-      max-width: 1150px;
-      margin: auto;
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
+header{
+background:white;
+border-bottom:1px solid #e5e7eb;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      color: #172033;
-      text-decoration: none;
-    }
+.nav{
+max-width:1150px;
+margin:auto;
+padding:17px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .logo span {
-      color: #4f46e5;
-    }
+.logo{
+font-size:25px;
+font-weight:800;
+text-decoration:none;
+color:#172033;
+}
 
-    nav a {
-      color: #4b5563;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+.logo span{color:#4f46e5}
 
-    .hero {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      padding: 85px 20px 60px;
-    }
+nav a{
+text-decoration:none;
+color:#64748b;
+margin-left:20px;
+font-size:14px;
+}
 
-    .hero-badge {
-      display: inline-block;
-      background: #eef2ff;
-      color: #4338ca;
-      padding: 7px 14px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
+.hero{
+max-width:900px;
+margin:auto;
+padding:80px 20px 55px;
+text-align:center;
+}
 
-    h1 {
-      font-size: clamp(38px, 7vw, 65px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
+.badge{
+display:inline-block;
+padding:7px 14px;
+border-radius:30px;
+background:#eef2ff;
+color:#4338ca;
+font-weight:bold;
+font-size:13px;
+margin-bottom:18px;
+}
 
-    h1 span {
-      color: #4f46e5;
-    }
+h1{
+font-size:clamp(40px,7vw,65px);
+line-height:1.05;
+margin-bottom:20px;
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #64748b;
-      font-size: 18px;
-    }
+h1 span{color:#4f46e5}
 
-    .search {
-      max-width: 620px;
-      margin: 35px auto 0;
-      display: flex;
-      background: white;
-      border: 1px solid #dfe3ea;
-      border-radius: 14px;
-      padding: 5px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.06);
-    }
+.hero p{
+max-width:650px;
+margin:auto;
+font-size:18px;
+color:#64748b;
+}
 
-    .search input {
-      width: 100%;
-      border: 0;
-      outline: none;
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 10px;
-    }
+.search{
+max-width:620px;
+margin:32px auto 0;
+background:white;
+border:1px solid #dfe3ea;
+padding:6px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
 
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 20px;
-    }
+.search input{
+width:100%;
+border:0;
+outline:0;
+padding:14px;
+font-size:16px;
+}
 
-    .section-title {
-      margin-bottom: 25px;
-    }
+main{
+max-width:1150px;
+margin:auto;
+padding:20px;
+}
 
-    .section-title h2 {
-      font-size: 30px;
-      margin-bottom: 5px;
-    }
+.section-title{
+margin-bottom:25px;
+}
 
-    .section-title p {
-      color: #64748b;
-    }
+.section-title h2{
+font-size:30px;
+}
 
-    .tools {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
+.section-title p{
+color:#64748b;
+}
 
-    .tool {
-      background: white;
-      padding: 25px;
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      transition: .2s;
-      cursor: pointer;
-    }
+.tools{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
 
-    .tool:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.08);
-      border-color: #c7d2fe;
-    }
+.tool{
+background:white;
+padding:25px;
+border:1px solid #e5e7eb;
+border-radius:18px;
+cursor:pointer;
+transition:.2s;
+}
 
-    .icon {
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #eef2ff;
-      border-radius: 13px;
-      font-size: 23px;
-      margin-bottom: 17px;
-    }
+.tool:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+border-color:#c7d2fe;
+}
 
-    .tool h3 {
-      margin-bottom: 7px;
-      font-size: 18px;
-    }
+.icon{
+width:48px;
+height:48px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:13px;
+background:#eef2ff;
+font-size:23px;
+margin-bottom:16px;
+}
 
-    .tool p {
-      color: #64748b;
-      font-size: 14px;
-    }
+.tool h3{
+font-size:18px;
+margin-bottom:6px;
+}
 
-    .calculator {
-      margin-top: 70px;
-      background: white;
-      border-radius: 22px;
-      padding: 35px;
-      border: 1px solid #e5e7eb;
-    }
+.tool p{
+font-size:14px;
+color:#64748b;
+}
 
-    .calculator h2 {
-      margin-bottom: 8px;
-    }
+.calculators{
+margin-top:75px;
+}
 
-    .calculator > p {
-      color: #64748b;
-      margin-bottom: 25px;
-    }
+.calculator{
+display:none;
+background:white;
+border:1px solid #e5e7eb;
+border-radius:22px;
+padding:32px;
+margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
 
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
+.calculator.active{
+display:block;
+}
 
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 7px;
-    }
+.calculator h2{
+font-size:28px;
+margin-bottom:5px;
+}
 
-    input {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #d7dce4;
-      border-radius: 10px;
-      font-size: 16px;
-    }
+.description{
+color:#64748b;
+margin-bottom:25px;
+}
 
-    button {
-      margin-top: 20px;
-      background: #4f46e5;
-      color: white;
-      border: 0;
-      padding: 14px 22px;
-      border-radius: 11px;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
 
-    button:hover {
-      background: #4338ca;
-    }
+.field label{
+display:block;
+font-size:13px;
+font-weight:bold;
+margin-bottom:6px;
+}
 
-    .result {
-      margin-top: 20px;
-      padding: 20px;
-      background: #f0fdf4;
-      border-radius: 12px;
-      display: none;
-    }
+.field input,
+.field select,
+.field textarea{
+width:100%;
+padding:13px;
+border:1px solid #d7dce4;
+border-radius:10px;
+font-size:16px;
+background:white;
+}
 
-    .result strong {
-      font-size: 25px;
-      color: #15803d;
-    }
+textarea{
+min-height:100px;
+resize:vertical;
+}
 
-    .seo-content {
-      max-width: 850px;
-      margin: 80px auto;
-    }
+button{
+margin-top:20px;
+background:#4f46e5;
+color:white;
+border:0;
+padding:14px 22px;
+border-radius:11px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+}
 
-    .seo-content h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+button:hover{background:#4338ca}
 
-    .seo-content p {
-      color: #526071;
-      margin-bottom: 15px;
-    }
+.result{
+display:none;
+margin-top:20px;
+padding:20px;
+background:#f0fdf4;
+border:1px solid #bbf7d0;
+border-radius:13px;
+}
 
-    footer {
-      margin-top: 70px;
-      background: #111827;
-      color: #cbd5e1;
-      padding: 45px 20px;
-      text-align: center;
-    }
+.result strong{
+font-size:25px;
+color:#15803d;
+}
 
-    footer strong {
-      color: white;
-    }
+.info{
+max-width:850px;
+margin:80px auto;
+}
 
-    @media(max-width: 800px) {
-      .tools {
-        grid-template-columns: 1fr;
-      }
+.info h2{
+font-size:30px;
+margin-bottom:15px;
+}
 
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
+.info p{
+color:#526071;
+margin-bottom:15px;
+}
 
-      nav {
-        display: none;
-      }
+footer{
+margin-top:70px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:45px 20px;
+}
 
-      .hero {
-        padding-top: 55px;
-      }
+footer strong{color:white}
 
-      .calculator {
-        padding: 22px;
-      }
-    }
-  </style>
+@media(max-width:800px){
+
+.tools{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+padding-top:55px;
+}
+
+.calculator{
+padding:22px;
+}
+
+}
+</style>
 </head>
+
 
 <body>
 
 <header>
-  <div class="nav">
-    <a class="logo" href="#">
-      Calcula<span>Fácil</span>
-    </a>
+<div class="nav">
 
-    <nav>
-      <a href="#herramientas">Herramientas</a>
-      <a href="#gasolina">Gasolina</a>
-      <a href="#informacion">Cómo funciona</a>
-    </nav>
-  </div>
+<a class="logo" href="#">
+Calcula<span>Fácil</span>
+</a>
+
+<nav>
+<a href="#herramientas">Calculadoras</a>
+<a href="#informacion">Información</a>
+</nav>
+
+</div>
 </header>
 
 
 <section class="hero">
 
-  <div class="hero-badge">
-    Herramientas 100% gratuitas
-  </div>
+<div class="badge">
+✓ Gratis · Sin registro
+</div>
 
-  <h1>
-    Calcula lo que necesites.<br>
-    <span>Fácil y rápido.</span>
-  </h1>
+<h1>
+Calcula lo que necesites.<br>
+<span>Fácil y rápido.</span>
+</h1>
 
-  <p>
-    Calculadoras y herramientas gratuitas para resolver
-    los cálculos del día a día sin registros ni complicaciones.
-  </p>
+<p>
+Herramientas gratuitas para resolver cálculos cotidianos
+desde el móvil o el ordenador.
+</p>
 
-  <div class="search">
-    <input
-      id="searchInput"
-      type="text"
-      placeholder="Buscar una calculadora..."
-      onkeyup="buscarHerramientas()">
-  </div>
+<div class="search">
+<input
+id="buscador"
+placeholder="¿Qué necesitas calcular?"
+onkeyup="buscar()">
+</div>
 
 </section>
 
@@ -344,174 +352,412 @@
 
 <section id="herramientas">
 
-  <div class="section-title">
-    <h2>Calculadoras populares</h2>
-    <p>Encuentra rápidamente la herramienta que necesitas.</p>
-  </div>
+<div class="section-title">
+<h2>Calculadoras</h2>
+<p>Selecciona una herramienta para empezar.</p>
+</div>
 
 
-  <div class="tools" id="tools">
+<div class="tools">
 
 
-    <div class="tool" data-name="gasolina viaje coche combustible">
-      <div class="icon">⛽</div>
-      <h3>Coste de gasolina</h3>
-      <p>Calcula cuánto gastarás en combustible durante un viaje.</p>
-    </div>
+<div class="tool" data-search="gasolina combustible coche viaje" onclick="abrir('gasolina')">
+<div class="icon">⛽</div>
+<h3>Coste de gasolina</h3>
+<p>Calcula combustible, litros y coste de un viaje.</p>
+</div>
 
 
-    <div class="tool" data-name="iva impuestos precio">
-      <div class="icon">🧾</div>
-      <h3>Calculadora de IVA</h3>
-      <p>Añade o elimina el IVA de cualquier cantidad.</p>
-    </div>
+<div class="tool" data-search="iva impuesto precio" onclick="abrir('iva')">
+<div class="icon">🧾</div>
+<h3>IVA</h3>
+<p>Añade o calcula el IVA de una cantidad.</p>
+</div>
 
 
-    <div class="tool" data-name="descuento rebajas porcentaje">
-      <div class="icon">🏷️</div>
-      <h3>Calculadora de descuentos</h3>
-      <p>Descubre el precio final después de aplicar un descuento.</p>
-    </div>
+<div class="tool" data-search="descuento rebaja precio" onclick="abrir('descuento')">
+<div class="icon">🏷️</div>
+<h3>Descuentos</h3>
+<p>Calcula cuánto pagarás después de una rebaja.</p>
+</div>
 
 
-    <div class="tool" data-name="porcentaje calcular">
-      <div class="icon">%</div>
-      <h3>Calculadora de porcentajes</h3>
-      <p>Calcula porcentajes de cualquier cantidad rápidamente.</p>
-    </div>
+<div class="tool" data-search="porcentaje tanto por ciento" onclick="abrir('porcentaje')">
+<div class="icon">%</div>
+<h3>Porcentajes</h3>
+<p>Calcula rápidamente el porcentaje de una cantidad.</p>
+</div>
 
 
-    <div class="tool" data-name="gastos amigos dividir dinero">
-      <div class="icon">👥</div>
-      <h3>Dividir gastos</h3>
-      <p>Divide una cuenta o gasto entre varias personas.</p>
-    </div>
+<div class="tool" data-search="gastos dividir amigos cuenta" onclick="abrir('gastos')">
+<div class="icon">👥</div>
+<h3>Dividir gastos</h3>
+<p>Divide una cuenta entre varias personas.</p>
+</div>
 
 
-    <div class="tool" data-name="dias fechas calendario">
-      <div class="icon">📅</div>
-      <h3>Días entre fechas</h3>
-      <p>Calcula cuántos días existen entre dos fechas.</p>
-    </div>
+<div class="tool" data-search="dias fechas calendario diferencia" onclick="abrir('fechas')">
+<div class="icon">📅</div>
+<h3>Días entre fechas</h3>
+<p>Descubre cuántos días hay entre dos fechas.</p>
+</div>
 
 
-    <div class="tool" data-name="horas trabajo jornada">
-      <div class="icon">⏱️</div>
-      <h3>Horas trabajadas</h3>
-      <p>Calcula fácilmente tus horas de trabajo.</p>
-    </div>
+<div class="tool" data-search="horas trabajo jornada" onclick="abrir('horas')">
+<div class="icon">⏱️</div>
+<h3>Horas trabajadas</h3>
+<p>Calcula las horas de una jornada laboral.</p>
+</div>
 
 
-    <div class="tool" data-name="sueldo hora salario">
-      <div class="icon">💶</div>
-      <h3>Sueldo por hora</h3>
-      <p>Calcula cuánto estás cobrando realmente por hora.</p>
-    </div>
+<div class="tool" data-search="sueldo salario hora trabajo" onclick="abrir('sueldo')">
+<div class="icon">💶</div>
+<h3>Sueldo por hora</h3>
+<p>Calcula cuánto cobras por cada hora trabajada.</p>
+</div>
 
 
-    <div class="tool" data-name="nota media estudios">
-      <div class="icon">🎓</div>
-      <h3>Nota media</h3>
-      <p>Calcula la media de tus notas rápidamente.</p>
-    </div>
-
-  </div>
-
-</section>
+<div class="tool" data-search="nota media estudios examen" onclick="abrir('notas')">
+<div class="icon">🎓</div>
+<h3>Nota media</h3>
+<p>Obtén rápidamente la media de tus notas.</p>
+</div>
 
 
-<section class="calculator" id="gasolina">
-
-  <h2>⛽ Calculadora de coste de gasolina</h2>
-
-  <p>
-    Introduce los datos de tu viaje para saber aproximadamente
-    cuánto gastarás en combustible.
-  </p>
-
-
-  <div class="form-grid">
-
-    <div>
-      <label for="km">Distancia del viaje (km)</label>
-      <input
-        id="km"
-        type="number"
-        min="0"
-        step="0.1"
-        placeholder="Ej: 650">
-    </div>
-
-
-    <div>
-      <label for="consumo">Consumo del coche (L/100 km)</label>
-      <input
-        id="consumo"
-        type="number"
-        min="0"
-        step="0.1"
-        placeholder="Ej: 6.5">
-    </div>
-
-
-    <div>
-      <label for="precio">Precio combustible (€/L)</label>
-      <input
-        id="precio"
-        type="number"
-        min="0"
-        step="0.001"
-        placeholder="Ej: 1.55">
-    </div>
-
-  </div>
-
-
-  <button onclick="calcularGasolina()">
-    Calcular coste
-  </button>
-
-
-  <div class="result" id="resultado">
-
-    Combustible necesario:
-    <span id="litros"></span> litros
-
-    <br><br>
-
-    Coste aproximado:
-
-    <br>
-
-    <strong id="coste"></strong>
-
-  </div>
+</div>
 
 </section>
 
 
 
-<section class="seo-content" id="informacion">
+<section class="calculators">
 
-  <h2>Calculadoras online gratuitas</h2>
 
-  <p>
-    CalculaFácil reúne herramientas online diseñadas para
-    ayudarte con cálculos habituales de forma rápida y sencilla.
-  </p>
+<!-- GASOLINA -->
 
-  <p>
-    Puedes calcular el coste de combustible de un viaje,
-    porcentajes, descuentos, IVA, gastos compartidos,
-    días entre fechas y muchas otras operaciones sin necesidad
-    de instalar ninguna aplicación.
-  </p>
+<div class="calculator" id="gasolina">
 
-  <p>
-    Todas nuestras herramientas son gratuitas y pueden utilizarse
-    directamente desde el navegador tanto en ordenador como
-    en teléfono móvil.
-  </p>
+<h2>⛽ Calculadora de gasolina</h2>
+
+<p class="description">
+Calcula cuánto combustible necesitas y cuánto costará tu viaje.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Kilómetros</label>
+<input id="gkm" type="number" placeholder="650">
+</div>
+
+<div class="field">
+<label>Consumo (L/100 km)</label>
+<input id="gconsumo" type="number" step="0.1" placeholder="6.5">
+</div>
+
+<div class="field">
+<label>Precio combustible (€/L)</label>
+<input id="gprecio" type="number" step="0.001" placeholder="1.55">
+</div>
+
+<div class="field">
+<label>Personas</label>
+<input id="gpersonas" type="number" value="1" min="1">
+</div>
+
+</div>
+
+<button onclick="gasolina()">Calcular viaje</button>
+
+<div class="result" id="gres"></div>
+
+</div>
+
+
+
+<!-- IVA -->
+
+<div class="calculator" id="iva">
+
+<h2>🧾 Calculadora de IVA</h2>
+
+<p class="description">
+Calcula el IVA y el precio final.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Precio sin IVA (€)</label>
+<input id="iprecio" type="number" placeholder="100">
+</div>
+
+<div class="field">
+<label>IVA</label>
+
+<select id="itipo">
+<option value="21">21%</option>
+<option value="10">10%</option>
+<option value="4">4%</option>
+</select>
+
+</div>
+
+</div>
+
+<button onclick="iva()">Calcular IVA</button>
+
+<div class="result" id="ires"></div>
+
+</div>
+
+
+
+<!-- DESCUENTO -->
+
+<div class="calculator" id="descuento">
+
+<h2>🏷️ Calculadora de descuentos</h2>
+
+<p class="description">
+Calcula el precio final después de aplicar un descuento.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Precio original (€)</label>
+<input id="dprecio" type="number" placeholder="100">
+</div>
+
+<div class="field">
+<label>Descuento (%)</label>
+<input id="dporcentaje" type="number" placeholder="20">
+</div>
+
+</div>
+
+<button onclick="descuento()">Calcular descuento</button>
+
+<div class="result" id="dres"></div>
+
+</div>
+
+
+
+<!-- PORCENTAJE -->
+
+<div class="calculator" id="porcentaje">
+
+<h2>% Calculadora de porcentajes</h2>
+
+<p class="description">
+Calcula qué cantidad representa un porcentaje.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Porcentaje (%)</label>
+<input id="pporcentaje" type="number" placeholder="20">
+</div>
+
+<div class="field">
+<label>Cantidad</label>
+<input id="pcantidad" type="number" placeholder="500">
+</div>
+
+</div>
+
+<button onclick="porcentaje()">Calcular porcentaje</button>
+
+<div class="result" id="pres"></div>
+
+</div>
+
+
+
+<!-- GASTOS -->
+
+<div class="calculator" id="gastos">
+
+<h2>👥 Dividir gastos</h2>
+
+<p class="description">
+Divide una cuenta entre varias personas.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Total (€)</label>
+<input id="gtotal" type="number" placeholder="120">
+</div>
+
+<div class="field">
+<label>Número de personas</label>
+<input id="gpersonas2" type="number" min="1" placeholder="4">
+</div>
+
+</div>
+
+<button onclick="gastos()">Dividir cuenta</button>
+
+<div class="result" id="gares"></div>
+
+</div>
+
+
+
+<!-- FECHAS -->
+
+<div class="calculator" id="fechas">
+
+<h2>📅 Días entre dos fechas</h2>
+
+<p class="description">
+Calcula la diferencia exacta entre dos fechas.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Fecha inicial</label>
+<input id="finicio" type="date">
+</div>
+
+<div class="field">
+<label>Fecha final</label>
+<input id="ffinal" type="date">
+</div>
+
+</div>
+
+<button onclick="fechas()">Calcular días</button>
+
+<div class="result" id="fres"></div>
+
+</div>
+
+
+
+<!-- HORAS -->
+
+<div class="calculator" id="horas">
+
+<h2>⏱️ Horas trabajadas</h2>
+
+<p class="description">
+Calcula cuánto has trabajado entre la hora de entrada y salida.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Hora de entrada</label>
+<input id="hentrada" type="time">
+</div>
+
+<div class="field">
+<label>Hora de salida</label>
+<input id="hsalida" type="time">
+</div>
+
+<div class="field">
+<label>Descanso (minutos)</label>
+<input id="hdescanso" type="number" value="0">
+</div>
+
+</div>
+
+<button onclick="horas()">Calcular horas</button>
+
+<div class="result" id="hres"></div>
+
+</div>
+
+
+
+<!-- SUELDO -->
+
+<div class="calculator" id="sueldo">
+
+<h2>💶 Sueldo por hora</h2>
+
+<p class="description">
+Calcula cuánto cobras realmente por cada hora trabajada.
+</p>
+
+<div class="grid">
+
+<div class="field">
+<label>Sueldo (€)</label>
+<input id="ssueldo" type="number" placeholder="1500">
+</div>
+
+<div class="field">
+<label>Horas trabajadas</label>
+<input id="shoras" type="number" placeholder="160">
+</div>
+
+</div>
+
+<button onclick="sueldo()">Calcular sueldo por hora</button>
+
+<div class="result" id="sres"></div>
+
+</div>
+
+
+
+<!-- NOTAS -->
+
+<div class="calculator" id="notas">
+
+<h2>🎓 Calculadora de nota media</h2>
+
+<p class="description">
+Introduce tus notas separadas por comas.
+</p>
+
+<div class="field">
+
+<label>Notas</label>
+
+<textarea id="nnotas" placeholder="7.5, 8, 6.5, 9, 10"></textarea>
+
+</div>
+
+<button onclick="notas()">Calcular media</button>
+
+<div class="result" id="nres"></div>
+
+</div>
+
+
+</section>
+
+
+
+<section class="info" id="informacion">
+
+<h2>Calculadoras online gratuitas</h2>
+
+<p>
+CalculaFácil reúne herramientas gratuitas para realizar cálculos
+cotidianos rápidamente desde cualquier dispositivo.
+</p>
+
+<p>
+Puedes calcular el coste de un viaje en coche, IVA, descuentos,
+porcentajes, gastos compartidos, diferencias entre fechas,
+horas trabajadas, salario por hora y notas medias.
+</p>
+
+<p>
+No necesitas registrarte ni instalar ninguna aplicación.
+Introduce tus datos y obtén el resultado directamente en tu navegador.
+</p>
 
 </section>
 
@@ -520,111 +766,297 @@
 
 <footer>
 
-  <strong>CalculaFácil</strong>
-
-  <br>
-
-  Herramientas online gratuitas para tu día a día.
-
-  <br><br>
-
-  © 2026 CalculaFácil
+<strong>CalculaFácil</strong><br>
+Herramientas online gratuitas para tu día a día.<br><br>
+© 2026 CalculaFácil
 
 </footer>
 
 
 <script>
 
-function calcularGasolina() {
-
-  const km =
-    parseFloat(document.getElementById("km").value);
-
-  const consumo =
-    parseFloat(document.getElementById("consumo").value);
-
-  const precio =
-    parseFloat(document.getElementById("precio").value);
+function money(n){
+return n.toLocaleString("es-ES",{
+style:"currency",
+currency:"EUR"
+});
+}
 
 
-  if (
-    !Number.isFinite(km) ||
-    !Number.isFinite(consumo) ||
-    !Number.isFinite(precio) ||
-    km <= 0 ||
-    consumo <= 0 ||
-    precio <= 0
-  ) {
+function numero(id){
 
-    alert("Introduce valores válidos mayores que 0.");
+const n=parseFloat(document.getElementById(id).value);
 
-    return;
-  }
-
-
-  const litros =
-    (km * consumo) / 100;
-
-
-  const coste =
-    litros * precio;
-
-
-  document.getElementById("litros").textContent =
-    litros.toFixed(2);
-
-
-  document.getElementById("coste").textContent =
-    coste.toFixed(2) + " €";
-
-
-  document.getElementById("resultado").style.display =
-    "block";
+return Number.isFinite(n) ? n : null;
 
 }
 
 
-function buscarHerramientas() {
+function mostrar(id,html){
 
-  const busqueda =
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase();
+const r=document.getElementById(id);
 
+r.innerHTML=html;
 
-  const herramientas =
-    document.querySelectorAll(".tool");
+r.style.display="block";
 
-
-  herramientas.forEach(function(herramienta) {
-
-    const nombre =
-      herramienta
-      .getAttribute("data-name")
-      .toLowerCase();
+}
 
 
-    const titulo =
-      herramienta
-      .querySelector("h3")
-      .textContent
-      .toLowerCase();
+function abrir(id){
+
+document.querySelectorAll(".calculator").forEach(c=>{
+c.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+document.getElementById(id).scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
 
 
-    if (
-      nombre.includes(busqueda) ||
-      titulo.includes(busqueda)
-    ) {
+function gasolina(){
 
-      herramienta.style.display = "block";
+const km=numero("gkm");
+const consumo=numero("gconsumo");
+const precio=numero("gprecio");
+const personas=numero("gpersonas");
 
-    } else {
+if(km===null||consumo===null||precio===null||personas===null||
+km<=0||consumo<=0||precio<=0||personas<1){
+alert("Introduce datos válidos.");
+return;
+}
 
-      herramienta.style.display = "none";
+const litros=km*consumo/100;
+const total=litros*precio;
+const persona=total/personas;
 
-    }
+mostrar("gres",
+"Necesitarás <strong>"+litros.toFixed(2)+" L</strong><br>"+
+"Coste total: <strong>"+money(total)+"</strong><br>"+
+"Por persona: <strong>"+money(persona)+"</strong>"
+);
 
-  });
+}
+
+
+
+function iva(){
+
+const precio=numero("iprecio");
+const tipo=numero("itipo");
+
+if(precio===null||precio<0){
+alert("Introduce un precio válido.");
+return;
+}
+
+const impuesto=precio*tipo/100;
+const total=precio+impuesto;
+
+mostrar("ires",
+"IVA: <strong>"+money(impuesto)+"</strong><br>"+
+"Precio final: <strong>"+money(total)+"</strong>"
+);
+
+}
+
+
+
+function descuento(){
+
+const precio=numero("dprecio");
+const porcentaje=numero("dporcentaje");
+
+if(precio===null||porcentaje===null||precio<0||porcentaje<0){
+alert("Introduce datos válidos.");
+return;
+}
+
+const ahorro=precio*porcentaje/100;
+const final=precio-ahorro;
+
+mostrar("dres",
+"Ahorras <strong>"+money(ahorro)+"</strong><br>"+
+"Precio final: <strong>"+money(final)+"</strong>"
+);
+
+}
+
+
+
+function porcentaje(){
+
+const p=numero("pporcentaje");
+const cantidad=numero("pcantidad");
+
+if(p===null||cantidad===null){
+alert("Introduce datos válidos.");
+return;
+}
+
+const resultado=cantidad*p/100;
+
+mostrar("pres",
+p+"% de "+cantidad+" es <strong>"+resultado.toLocaleString("es-ES")+"</strong>"
+);
+
+}
+
+
+
+function gastos(){
+
+const total=numero("gtotal");
+const personas=numero("gpersonas2");
+
+if(total===null||personas===null||total<0||personas<1){
+alert("Introduce datos válidos.");
+return;
+}
+
+const cada=total/personas;
+
+mostrar("gares",
+"Cada persona paga <strong>"+money(cada)+"</strong>"
+);
+
+}
+
+
+
+function fechas(){
+
+const inicio=document.getElementById("finicio").value;
+const final=document.getElementById("ffinal").value;
+
+if(!inicio||!final){
+alert("Selecciona las dos fechas.");
+return;
+}
+
+const d1=new Date(inicio+"T00:00:00");
+const d2=new Date(final+"T00:00:00");
+
+const diferencia=Math.abs(d2-d1);
+
+const dias=Math.round(diferencia/86400000);
+
+mostrar("fres",
+"Hay <strong>"+dias+" días</strong> entre las dos fechas."
+);
+
+}
+
+
+
+function horas(){
+
+const entrada=document.getElementById("hentrada").value;
+const salida=document.getElementById("hsalida").value;
+
+let descanso=numero("hdescanso");
+
+if(descanso===null) descanso=0;
+
+if(!entrada||!salida||descanso<0){
+alert("Introduce horarios válidos.");
+return;
+}
+
+let e=entrada.split(":");
+let s=salida.split(":");
+
+let inicio=parseInt(e[0])*60+parseInt(e[1]);
+let fin=parseInt(s[0])*60+parseInt(s[1]);
+
+if(fin<inicio){
+fin+=1440;
+}
+
+let minutos=fin-inicio-descanso;
+
+if(minutos<0){
+alert("El descanso no puede superar la jornada.");
+return;
+}
+
+const h=Math.floor(minutos/60);
+const m=minutos%60;
+
+mostrar("hres",
+"Has trabajado <strong>"+h+" h "+m+" min</strong>"
+);
+
+}
+
+
+
+function sueldo(){
+
+const salario=numero("ssueldo");
+const horas=numero("shoras");
+
+if(salario===null||horas===null||salario<0||horas<=0){
+alert("Introduce datos válidos.");
+return;
+}
+
+const resultado=salario/horas;
+
+mostrar("sres",
+"Tu sueldo es de aproximadamente <strong>"+
+money(resultado)+" por hora</strong>"
+);
+
+}
+
+
+
+function notas(){
+
+const texto=document.getElementById("nnotas").value;
+
+const valores=texto
+.split(",")
+.map(n=>parseFloat(n.trim()))
+.filter(n=>Number.isFinite(n));
+
+if(valores.length===0){
+alert("Introduce las notas separadas por comas.");
+return;
+}
+
+const suma=valores.reduce((a,b)=>a+b,0);
+
+const media=suma/valores.length;
+
+mostrar("nres",
+"Tu nota media es <strong>"+media.toFixed(2)+"</strong>"
+);
+
+}
+
+
+
+function buscar(){
+
+const q=document.getElementById("buscador").value.toLowerCase();
+
+document.querySelectorAll(".tool").forEach(t=>{
+
+const texto=
+(t.dataset.search+" "+t.innerText).toLowerCase();
+
+t.style.display=
+texto.includes(q) ? "block" : "none";
+
+});
 
 }
 
