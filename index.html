@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+<meta name="google-site-verification" content="VWSyu8q3KP2Z0kQ33JnyOvBpVq5Xgtc4QxR2qxRGNoM" />
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -278,31 +281,15 @@ padding:45px 20px;
 footer strong{color:white}
 
 @media(max-width:800px){
-
-.tools{
-grid-template-columns:1fr;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-nav{
-display:none;
-}
-
-.hero{
-padding-top:55px;
-}
-
-.calculator{
-padding:22px;
-}
-
+.tools{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+nav{display:none}
+.hero{padding-top:55px}
+.calculator{padding:22px}
 }
 </style>
-</head>
 
+</head>
 
 <body>
 
@@ -339,8 +326,7 @@ desde el móvil o el ordenador.
 </p>
 
 <div class="search">
-<input
-id="buscador"
+<input id="buscador"
 placeholder="¿Qué necesitas calcular?"
 onkeyup="buscar()">
 </div>
@@ -357,9 +343,7 @@ onkeyup="buscar()">
 <p>Selecciona una herramienta para empezar.</p>
 </div>
 
-
 <div class="tools">
-
 
 <div class="tool" data-search="gasolina combustible coche viaje" onclick="abrir('gasolina')">
 <div class="icon">⛽</div>
@@ -367,13 +351,11 @@ onkeyup="buscar()">
 <p>Calcula combustible, litros y coste de un viaje.</p>
 </div>
 
-
 <div class="tool" data-search="iva impuesto precio" onclick="abrir('iva')">
 <div class="icon">🧾</div>
 <h3>IVA</h3>
 <p>Añade o calcula el IVA de una cantidad.</p>
 </div>
-
 
 <div class="tool" data-search="descuento rebaja precio" onclick="abrir('descuento')">
 <div class="icon">🏷️</div>
@@ -381,13 +363,11 @@ onkeyup="buscar()">
 <p>Calcula cuánto pagarás después de una rebaja.</p>
 </div>
 
-
 <div class="tool" data-search="porcentaje tanto por ciento" onclick="abrir('porcentaje')">
 <div class="icon">%</div>
 <h3>Porcentajes</h3>
 <p>Calcula rápidamente el porcentaje de una cantidad.</p>
 </div>
-
 
 <div class="tool" data-search="gastos dividir amigos cuenta" onclick="abrir('gastos')">
 <div class="icon">👥</div>
@@ -395,13 +375,11 @@ onkeyup="buscar()">
 <p>Divide una cuenta entre varias personas.</p>
 </div>
 
-
 <div class="tool" data-search="dias fechas calendario diferencia" onclick="abrir('fechas')">
 <div class="icon">📅</div>
 <h3>Días entre fechas</h3>
 <p>Descubre cuántos días hay entre dos fechas.</p>
 </div>
-
 
 <div class="tool" data-search="horas trabajo jornada" onclick="abrir('horas')">
 <div class="icon">⏱️</div>
@@ -409,13 +387,11 @@ onkeyup="buscar()">
 <p>Calcula las horas de una jornada laboral.</p>
 </div>
 
-
 <div class="tool" data-search="sueldo salario hora trabajo" onclick="abrir('sueldo')">
 <div class="icon">💶</div>
 <h3>Sueldo por hora</h3>
 <p>Calcula cuánto cobras por cada hora trabajada.</p>
 </div>
-
 
 <div class="tool" data-search="nota media estudios examen" onclick="abrir('notas')">
 <div class="icon">🎓</div>
@@ -423,25 +399,15 @@ onkeyup="buscar()">
 <p>Obtén rápidamente la media de tus notas.</p>
 </div>
 
-
 </div>
-
 </section>
-
 
 
 <section class="calculators">
 
-
-<!-- GASOLINA -->
-
 <div class="calculator" id="gasolina">
-
 <h2>⛽ Calculadora de gasolina</h2>
-
-<p class="description">
-Calcula cuánto combustible necesitas y cuánto costará tu viaje.
-</p>
+<p class="description">Calcula cuánto combustible necesitas y cuánto costará tu viaje.</p>
 
 <div class="grid">
 
@@ -468,22 +434,13 @@ Calcula cuánto combustible necesitas y cuánto costará tu viaje.
 </div>
 
 <button onclick="gasolina()">Calcular viaje</button>
-
 <div class="result" id="gres"></div>
-
 </div>
 
 
-
-<!-- IVA -->
-
 <div class="calculator" id="iva">
-
 <h2>🧾 Calculadora de IVA</h2>
-
-<p class="description">
-Calcula el IVA y el precio final.
-</p>
+<p class="description">Calcula el IVA y el precio final.</p>
 
 <div class="grid">
 
@@ -502,26 +459,16 @@ Calcula el IVA y el precio final.
 </select>
 
 </div>
-
 </div>
 
 <button onclick="iva()">Calcular IVA</button>
-
 <div class="result" id="ires"></div>
-
 </div>
 
 
-
-<!-- DESCUENTO -->
-
 <div class="calculator" id="descuento">
-
 <h2>🏷️ Calculadora de descuentos</h2>
-
-<p class="description">
-Calcula el precio final después de aplicar un descuento.
-</p>
+<p class="description">Calcula el precio final después de aplicar un descuento.</p>
 
 <div class="grid">
 
@@ -538,22 +485,13 @@ Calcula el precio final después de aplicar un descuento.
 </div>
 
 <button onclick="descuento()">Calcular descuento</button>
-
 <div class="result" id="dres"></div>
-
 </div>
 
 
-
-<!-- PORCENTAJE -->
-
 <div class="calculator" id="porcentaje">
-
 <h2>% Calculadora de porcentajes</h2>
-
-<p class="description">
-Calcula qué cantidad representa un porcentaje.
-</p>
+<p class="description">Calcula qué cantidad representa un porcentaje.</p>
 
 <div class="grid">
 
@@ -570,22 +508,13 @@ Calcula qué cantidad representa un porcentaje.
 </div>
 
 <button onclick="porcentaje()">Calcular porcentaje</button>
-
 <div class="result" id="pres"></div>
-
 </div>
 
 
-
-<!-- GASTOS -->
-
 <div class="calculator" id="gastos">
-
 <h2>👥 Dividir gastos</h2>
-
-<p class="description">
-Divide una cuenta entre varias personas.
-</p>
+<p class="description">Divide una cuenta entre varias personas.</p>
 
 <div class="grid">
 
@@ -602,22 +531,13 @@ Divide una cuenta entre varias personas.
 </div>
 
 <button onclick="gastos()">Dividir cuenta</button>
-
 <div class="result" id="gares"></div>
-
 </div>
 
 
-
-<!-- FECHAS -->
-
 <div class="calculator" id="fechas">
-
 <h2>📅 Días entre dos fechas</h2>
-
-<p class="description">
-Calcula la diferencia exacta entre dos fechas.
-</p>
+<p class="description">Calcula la diferencia exacta entre dos fechas.</p>
 
 <div class="grid">
 
@@ -634,22 +554,13 @@ Calcula la diferencia exacta entre dos fechas.
 </div>
 
 <button onclick="fechas()">Calcular días</button>
-
 <div class="result" id="fres"></div>
-
 </div>
 
 
-
-<!-- HORAS -->
-
 <div class="calculator" id="horas">
-
 <h2>⏱️ Horas trabajadas</h2>
-
-<p class="description">
-Calcula cuánto has trabajado entre la hora de entrada y salida.
-</p>
+<p class="description">Calcula cuánto has trabajado entre la hora de entrada y salida.</p>
 
 <div class="grid">
 
@@ -671,22 +582,13 @@ Calcula cuánto has trabajado entre la hora de entrada y salida.
 </div>
 
 <button onclick="horas()">Calcular horas</button>
-
 <div class="result" id="hres"></div>
-
 </div>
 
 
-
-<!-- SUELDO -->
-
 <div class="calculator" id="sueldo">
-
 <h2>💶 Sueldo por hora</h2>
-
-<p class="description">
-Calcula cuánto cobras realmente por cada hora trabajada.
-</p>
+<p class="description">Calcula cuánto cobras realmente por cada hora trabajada.</p>
 
 <div class="grid">
 
@@ -703,40 +605,24 @@ Calcula cuánto cobras realmente por cada hora trabajada.
 </div>
 
 <button onclick="sueldo()">Calcular sueldo por hora</button>
-
 <div class="result" id="sres"></div>
-
 </div>
 
 
-
-<!-- NOTAS -->
-
 <div class="calculator" id="notas">
-
 <h2>🎓 Calculadora de nota media</h2>
-
-<p class="description">
-Introduce tus notas separadas por comas.
-</p>
+<p class="description">Introduce tus notas separadas por comas.</p>
 
 <div class="field">
-
 <label>Notas</label>
-
 <textarea id="nnotas" placeholder="7.5, 8, 6.5, 9, 10"></textarea>
-
 </div>
 
 <button onclick="notas()">Calcular media</button>
-
 <div class="result" id="nres"></div>
-
 </div>
 
-
 </section>
-
 
 
 <section class="info" id="informacion">
@@ -765,11 +651,9 @@ Introduce tus datos y obtén el resultado directamente en tu navegador.
 
 
 <footer>
-
 <strong>CalculaFácil</strong><br>
 Herramientas online gratuitas para tu día a día.<br><br>
 © 2026 CalculaFácil
-
 </footer>
 
 
@@ -782,26 +666,16 @@ currency:"EUR"
 });
 }
 
-
 function numero(id){
-
 const n=parseFloat(document.getElementById(id).value);
-
 return Number.isFinite(n) ? n : null;
-
 }
-
 
 function mostrar(id,html){
-
 const r=document.getElementById(id);
-
 r.innerHTML=html;
-
 r.style.display="block";
-
 }
-
 
 function abrir(id){
 
@@ -845,7 +719,6 @@ mostrar("gres",
 }
 
 
-
 function iva(){
 
 const precio=numero("iprecio");
@@ -865,7 +738,6 @@ mostrar("ires",
 );
 
 }
-
 
 
 function descuento(){
@@ -889,7 +761,6 @@ mostrar("dres",
 }
 
 
-
 function porcentaje(){
 
 const p=numero("pporcentaje");
@@ -903,11 +774,11 @@ return;
 const resultado=cantidad*p/100;
 
 mostrar("pres",
-p+"% de "+cantidad+" es <strong>"+resultado.toLocaleString("es-ES")+"</strong>"
+p+"% de "+cantidad+" es <strong>"+
+resultado.toLocaleString("es-ES")+"</strong>"
 );
 
 }
-
 
 
 function gastos(){
@@ -929,7 +800,6 @@ mostrar("gares",
 }
 
 
-
 function fechas(){
 
 const inicio=document.getElementById("finicio").value;
@@ -944,7 +814,6 @@ const d1=new Date(inicio+"T00:00:00");
 const d2=new Date(final+"T00:00:00");
 
 const diferencia=Math.abs(d2-d1);
-
 const dias=Math.round(diferencia/86400000);
 
 mostrar("fres",
@@ -952,7 +821,6 @@ mostrar("fres",
 );
 
 }
-
 
 
 function horas(){
@@ -996,7 +864,6 @@ mostrar("hres",
 }
 
 
-
 function sueldo(){
 
 const salario=numero("ssueldo");
@@ -1017,7 +884,6 @@ money(resultado)+" por hora</strong>"
 }
 
 
-
 function notas(){
 
 const texto=document.getElementById("nnotas").value;
@@ -1033,7 +899,6 @@ return;
 }
 
 const suma=valores.reduce((a,b)=>a+b,0);
-
 const media=suma/valores.length;
 
 mostrar("nres",
@@ -1043,18 +908,15 @@ mostrar("nres",
 }
 
 
-
 function buscar(){
 
 const q=document.getElementById("buscador").value.toLowerCase();
 
 document.querySelectorAll(".tool").forEach(t=>{
 
-const texto=
-(t.dataset.search+" "+t.innerText).toLowerCase();
+const texto=(t.dataset.search+" "+t.innerText).toLowerCase();
 
-t.style.display=
-texto.includes(q) ? "block" : "none";
+t.style.display=texto.includes(q) ? "block" : "none";
 
 });
 
