@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CalculaFácil | Calculadoras y herramientas online gratis</title>
+
+  <meta name="description"
+        content="Calculadoras online gratuitas para tu día a día. Calcula gasolina, IVA, descuentos, porcentajes, gastos compartidos y mucho más.">
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e7eaf0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #172033;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #4f46e5;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 85px 20px 60px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      padding: 7px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #4f46e5;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .search {
+      max-width: 620px;
+      margin: 35px auto 0;
+      display: flex;
+      background: white;
+      border: 1px solid #dfe3ea;
+      border-radius: 14px;
+      padding: 5px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.06);
+    }
+
+    .search input {
+      width: 100%;
+      border: 0;
+      outline: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .section-title p {
+      color: #64748b;
+    }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tool {
+      background: white;
+      padding: 25px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .tool:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      border-color: #c7d2fe;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef2ff;
+      border-radius: 13px;
+      font-size: 23px;
+      margin-bottom: 17px;
+    }
+
+    .tool h3 {
+      margin-bottom: 7px;
+      font-size: 18px;
+    }
+
+    .tool p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .calculator {
+      margin-top: 70px;
+      background: white;
+      border-radius: 22px;
+      padding: 35px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .calculator h2 {
+      margin-bottom: 8px;
+    }
+
+    .calculator > p {
+      color: #64748b;
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d7dce4;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #4f46e5;
+      color: white;
+      border: 0;
+      padding: 14px 22px;
+      border-radius: 11px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f0fdf4;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .result strong {
+      font-size: 25px;
+      color: #15803d;
+    }
+
+    .seo-content {
+      max-width: 850px;
+      margin: 80px auto;
+    }
+
+    .seo-content h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .seo-content p {
+      color: #526071;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      margin-top: 70px;
+      background: #111827;
+      color: #cbd5e1;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media(max-width: 800px) {
+      .tools {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .calculator {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#">
+      Calcula<span>Fácil</span>
+    </a>
+
+    <nav>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#gasolina">Gasolina</a>
+      <a href="#informacion">Cómo funciona</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-badge">
+    Herramientas 100% gratuitas
+  </div>
+
+  <h1>
+    Calcula lo que necesites.<br>
+    <span>Fácil y rápido.</span>
+  </h1>
+
+  <p>
+    Calculadoras y herramientas gratuitas para resolver
+    los cálculos del día a día sin registros ni complicaciones.
+  </p>
+
+  <div class="search">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Buscar una calculadora..."
+      onkeyup="buscarHerramientas()">
+  </div>
+
+</section>
+
+
+<main>
+
+<section id="herramientas">
+
+  <div class="section-title">
+    <h2>Calculadoras populares</h2>
+    <p>Encuentra rápidamente la herramienta que necesitas.</p>
+  </div>
+
+
+  <div class="tools" id="tools">
+
+
+    <div class="tool" data-name="gasolina viaje coche combustible">
+      <div class="icon">⛽</div>
+      <h3>Coste de gasolina</h3>
+      <p>Calcula cuánto gastarás en combustible durante un viaje.</p>
+    </div>
+
+
+    <div class="tool" data-name="iva impuestos precio">
+      <div class="icon">🧾</div>
+      <h3>Calculadora de IVA</h3>
+      <p>Añade o elimina el IVA de cualquier cantidad.</p>
+    </div>
+
+
+    <div class="tool" data-name="descuento rebajas porcentaje">
+      <div class="icon">🏷️</div>
+      <h3>Calculadora de descuentos</h3>
+      <p>Descubre el precio final después de aplicar un descuento.</p>
+    </div>
+
+
+    <div class="tool" data-name="porcentaje calcular">
+      <div class="icon">%</div>
+      <h3>Calculadora de porcentajes</h3>
+      <p>Calcula porcentajes de cualquier cantidad rápidamente.</p>
+    </div>
+
+
+    <div class="tool" data-name="gastos amigos dividir dinero">
+      <div class="icon">👥</div>
+      <h3>Dividir gastos</h3>
+      <p>Divide una cuenta o gasto entre varias personas.</p>
+    </div>
+
+
+    <div class="tool" data-name="dias fechas calendario">
+      <div class="icon">📅</div>
+      <h3>Días entre fechas</h3>
+      <p>Calcula cuántos días existen entre dos fechas.</p>
+    </div>
+
+
+    <div class="tool" data-name="horas trabajo jornada">
+      <div class="icon">⏱️</div>
+      <h3>Horas trabajadas</h3>
+      <p>Calcula fácilmente tus horas de trabajo.</p>
+    </div>
+
+
+    <div class="tool" data-name="sueldo hora salario">
+      <div class="icon">💶</div>
+      <h3>Sueldo por hora</h3>
+      <p>Calcula cuánto estás cobrando realmente por hora.</p>
+    </div>
+
+
+    <div class="tool" data-name="nota media estudios">
+      <div class="icon">🎓</div>
+      <h3>Nota media</h3>
+      <p>Calcula la media de tus notas rápidamente.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="calculator" id="gasolina">
+
+  <h2>⛽ Calculadora de coste de gasolina</h2>
+
+  <p>
+    Introduce los datos de tu viaje para saber aproximadamente
+    cuánto gastarás en combustible.
+  </p>
+
+
+  <div class="form-grid">
+
+    <div>
+      <label for="km">Distancia del viaje (km)</label>
+      <input
+        id="km"
+        type="number"
+        min="0"
+        step="0.1"
+        placeholder="Ej: 650">
+    </div>
+
+
+    <div>
+      <label for="consumo">Consumo del coche (L/100 km)</label>
+      <input
+        id="consumo"
+        type="number"
+        min="0"
+        step="0.1"
+        placeholder="Ej: 6.5">
+    </div>
+
+
+    <div>
+      <label for="precio">Precio combustible (€/L)</label>
+      <input
+        id="precio"
+        type="number"
+        min="0"
+        step="0.001"
+        placeholder="Ej: 1.55">
+    </div>
+
+  </div>
+
+
+  <button onclick="calcularGasolina()">
+    Calcular coste
+  </button>
+
+
+  <div class="result" id="resultado">
+
+    Combustible necesario:
+    <span id="litros"></span> litros
+
+    <br><br>
+
+    Coste aproximado:
+
+    <br>
+
+    <strong id="coste"></strong>
+
+  </div>
+
+</section>
+
+
+
+<section class="seo-content" id="informacion">
+
+  <h2>Calculadoras online gratuitas</h2>
+
+  <p>
+    CalculaFácil reúne herramientas online diseñadas para
+    ayudarte con cálculos habituales de forma rápida y sencilla.
+  </p>
+
+  <p>
+    Puedes calcular el coste de combustible de un viaje,
+    porcentajes, descuentos, IVA, gastos compartidos,
+    días entre fechas y muchas otras operaciones sin necesidad
+    de instalar ninguna aplicación.
+  </p>
+
+  <p>
+    Todas nuestras herramientas son gratuitas y pueden utilizarse
+    directamente desde el navegador tanto en ordenador como
+    en teléfono móvil.
+  </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <strong>CalculaFácil</strong>
+
+  <br>
+
+  Herramientas online gratuitas para tu día a día.
+
+  <br><br>
+
+  © 2026 CalculaFácil
+
+</footer>
+
+
+<script>
+
+function calcularGasolina() {
+
+  const km =
+    parseFloat(document.getElementById("km").value);
+
+  const consumo =
+    parseFloat(document.getElementById("consumo").value);
+
+  const precio =
+    parseFloat(document.getElementById("precio").value);
+
+
+  if (
+    !Number.isFinite(km) ||
+    !Number.isFinite(consumo) ||
+    !Number.isFinite(precio) ||
+    km <= 0 ||
+    consumo <= 0 ||
+    precio <= 0
+  ) {
+
+    alert("Introduce valores válidos mayores que 0.");
+
+    return;
+  }
+
+
+  const litros =
+    (km * consumo) / 100;
+
+
+  const coste =
+    litros * precio;
+
+
+  document.getElementById("litros").textContent =
+    litros.toFixed(2);
+
+
+  document.getElementById("coste").textContent =
+    coste.toFixed(2) + " €";
+
+
+  document.getElementById("resultado").style.display =
+    "block";
+
+}
+
+
+function buscarHerramientas() {
+
+  const busqueda =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+
+  const herramientas =
+    document.querySelectorAll(".tool");
+
+
+  herramientas.forEach(function(herramienta) {
+
+    const nombre =
+      herramienta
+      .getAttribute("data-name")
+      .toLowerCase();
+
+
+    const titulo =
+      herramienta
+      .querySelector("h3")
+      .textContent
+      .toLowerCase();
+
+
+    if (
+      nombre.includes(busqueda) ||
+      titulo.includes(busqueda)
+    ) {
+
+      herramienta.style.display = "block";
+
+    } else {
+
+      herramienta.style.display = "none";
+
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
